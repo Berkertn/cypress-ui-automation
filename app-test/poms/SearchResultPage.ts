@@ -4,9 +4,9 @@ import BasePage from "./commonPages/BasePage";
 
 class SearchResultPage extends BasePage {
     public breadCrumbSelector = '#ctl00_IsbankDVPlaceHolderBody_IsbankDVPlaceHolderCenter_IsbankBreadCrumb_ik_bradCrump';
-    public searchInputSelector = '#SearchBox > input';
+    public searchInputSelector = '#SearchBox input';
     public searchFindsListSelector = '#Groups';
-    public searchFindItemSelector = '#undefined_itemBody';
+    public searchFindItemSelector = '#undefined_itemSummary';
     public intSubeButtonSelector = 'div[class="ek_intsubeBtn"]:nth-of-type(1)';
 
     constructor() {
