@@ -10,7 +10,7 @@ export default defineConfig({
         setupNodeEvents(on, config) {
         },
         specPattern: 'app-test/ui-tests/**/*.cy.ts', // Test files path
-        supportFile: false,
+        supportFile: 'cypress/support/e2e.ts',
         defaultCommandTimeout: 10000,
         pageLoadTimeout: 60000,
         requestTimeout: 5000,
