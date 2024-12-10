@@ -2,28 +2,19 @@
 
 import BasePage from "./commonPages/BasePage";
 
-class HomePage extends BasePage {
-    private usernameField = '#username';
-    private passwordField = '#password';
-    private loginButton = '#login-button';
+class CardsPage extends BasePage {
+    public breadCrumbSelector = '#ctl00_IsbankDVPlaceHolderBody_IsbankDVPlaceHolderCenter_IsbankBreadCrumb_ik_bradCrump';
+    public headerSelector = '.topDefBaslik';
+    public subTitlesSelector = '.owl-item active';
+    public basvurButtonSelector = 'a[href="/kredi-karti-basvuru"]';
+
 
     constructor() {
         super();
         this.path = '/genel-bilgi';
-        this.title = 'Home Page - My Application';
-    }
-
-    enterUsername(username: string) {
-        cy.get(this.usernameField).type(username);
-    }
-
-    enterPassword(password: string) {
-        cy.get(this.passwordField).type(password);
-    }
-
-    submit() {
-        cy.get(this.loginButton).click();
+        this.title = '\n' +
+            '\tBankamız Hizmetleri, Faiz ve Ücretleri | Türkiye İş Bankası';
     }
 }
 
-export default HomePage;
+export default CardsPage;

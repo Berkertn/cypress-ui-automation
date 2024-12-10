@@ -21,6 +21,38 @@ class BasePage {
         });
     }
 
+    writeText(selector: string, text: string) {
+        cy.get(selector).type(text);
+    }
+
+    clearText(selector: string) {
+        cy.get(selector).clear();
+    }
+
+    deleteText(selector: string) {
+        cy.get(selector).type('{selectall}{backspace}');
+    }
+
+    click(selector: string) {
+        cy.get(selector).click();
+    }
+
+    tapEnter() {
+        cy.get('body').type('{enter}');
+    }
+
+    tapEnterOn(selector: string) {
+        cy.get(selector).type('{enter}');
+    }
+
+    verifyElementVisible(selector: string) {
+        cy.get(selector).should('be.visible');
+    }
+
+    verifyElementNotVisible(selector: string) {
+        cy.get(selector).should('not.be.visible');
+    }
+
 }
 
 export default BasePage;
